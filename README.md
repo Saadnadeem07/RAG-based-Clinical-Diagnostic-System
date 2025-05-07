@@ -1,16 +1,18 @@
+# 🧬 ClinicalRAG: Gemini-Powered Clinical Document Search with MIMIC-III
 
-```markdown
-# ClinicalRAG: Gemini-Powered Clinical Document Search with MIMIC-III
+**ClinicalRAG** is a Retrieval-Augmented Generation (RAG) system that leverages **Gemini Pro** to enable natural language querying over the **MIMIC-III** clinical dataset. It empowers healthcare practitioners and researchers to interactively search and reason over real-world ICU records using state-of-the-art large language models.
 
-A Retrieval-Augmented Generation (RAG) system built using Gemini Pro for querying and reasoning over MIMIC-III clinical data. This project enables healthcare practitioners and researchers to perform natural language queries and get accurate, context-aware answers based on real-world ICU records.
+---
 
 ## 🔍 Overview
 
-This project combines:
+This project integrates:
 
-- **MIMIC-III Dataset**: A rich, de-identified dataset of over 60,000 ICU admissions.
-- **Gemini Pro**: A powerful multimodal LLM used for contextual reasoning and answer generation.
-- **RAG Architecture**: Combines semantic search (via vector embeddings) and generative answering using Gemini.
+- **MIMIC-III Dataset**: A de-identified database of over 60,000 ICU admissions.
+- **Gemini Pro**: A multimodal large language model for contextual reasoning and response generation.
+- **RAG Architecture**: Combines semantic search via vector embeddings with generative answering using Gemini.
+
+---
 
 ## 📁 Project Structure
 
@@ -18,95 +20,116 @@ This project combines:
 
 clinicalrag/
 │
-├── data/                    # Preprocessed MIMIC-III clinical notes
-├── embeddings/              # FAISS vector index and metadata
-├── app.py                   # Streamlit app for UI
-├── gemini\_rag.py            # RAG logic with Gemini API integration
-├── utils.py                 # Helper functions
-├── requirements.txt         # Python dependencies
-└── README.md                # You're here!
+├── data/                   # Preprocessed MIMIC-III clinical notes
+├── embeddings/             # FAISS vector index and metadata
+├── app.py                  # Streamlit app for the user interface
+├── gemini\_rag.py           # Core RAG logic with Gemini API integration
+├── utils.py                # Helper functions and utilities
+├── requirements.txt        # Python dependencies
+└── README.md               # This documentation file
 
 ````
+
+---
 
 ## 🚀 Features
 
 - Upload or use built-in MIMIC-III clinical notes
-- FAISS-powered semantic search over note embeddings
-- Gemini generates context-based responses to medical questions
-- Clean Streamlit interface for interactive QA
+- FAISS-powered semantic search on clinical note embeddings
+- Gemini Pro generates detailed, contextual responses to medical queries
+- Intuitive Streamlit web interface for real-time interaction
+
+---
 
 ## 🧠 How It Works
 
-1. **Embedding**: Clinical notes are embedded using Google's embedding model.
-2. **Indexing**: FAISS is used to store and retrieve the most relevant notes.
-3. **RAG**: Retrieved chunks + your question are passed to Gemini to generate a contextual answer.
+1. **Embedding**: Clinical notes are embedded using Google’s text embedding model.
+2. **Indexing**: FAISS is used to index and retrieve the most relevant note chunks.
+3. **RAG Pipeline**: Retrieved chunks and the user’s query are passed to Gemini for final response generation.
+
+---
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone the Repo
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/clinicalrag.git
 cd clinicalrag
 ````
 
-### 2. Install Requirements
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Set API Key
+### 3. Set Gemini API Key
 
-Add your Gemini API key to the environment:
+Set your Gemini API key as an environment variable:
 
 ```bash
 export GOOGLE_API_KEY="your-api-key-here"
 ```
 
-### 4. Run the App
+> On Windows (CMD):
+
+```cmd
+set GOOGLE_API_KEY=your-api-key-here
+```
+
+### 4. Launch the Streamlit App
 
 ```bash
 streamlit run app.py
 ```
 
-## 🧪 Example Questions
+---
+
+## 💡 Example Queries
+
+Here are some examples of natural language queries you can ask:
 
 * *What medications were given during the ICU stay?*
 * *Did the patient show signs of pneumonia?*
 * *What was the discharge diagnosis?*
 
-## 🧾 Dataset Info
+---
 
-* **Source**: [MIMIC-III Clinical Database](https://physionet.org/content/mimiciii/1.4/)
-* **Type**: De-identified ICU data
+## 📊 Dataset Information
+
+* **Source**: [MIMIC-III Clinical Database v1.4](https://physionet.org/content/mimiciii/1.4/)
+* **Type**: De-identified ICU data (notes, diagnoses, procedures, etc.)
 * **License**: PhysioNet Credentialed Health Data Use Agreement
 
-## 📌 Dependencies
+---
+
+## 📦 Dependencies
 
 * `streamlit`
-* `faiss`
+* `faiss-cpu`
 * `openai`
-* `google.generativeai`
-* `pandas`, `numpy`, `tqdm`
+* `google-generativeai`
+* `pandas`
+* `numpy`
+* `tqdm`
+
+---
 
 ## 📄 License
 
-MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-## 👨‍⚕️ Author
+---
 
-Muhammad Bin Imran
+## 👤 Author
+
+**Muhammad Bin Imran**
 FAST National University of Computer and Emerging Sciences
-Email: [shubhammodi820@gmail.com](mailto:shubhammodi820@gmail.com)
+📧 [muhammadbinimran1000@gmail.com](mailto:muhammadbinimran1000@gmail.com)
 
 ---
 
-> **Disclaimer**: This tool is intended for educational and research purposes only. Not for use in real-world clinical decision-making.
+> ⚠️ **Disclaimer**: This tool is intended for educational and research purposes only. It is not approved for clinical use or medical decision-making.
 
-```
-
----
-
-Would you like me to generate a matching `requirements.txt` as well?
 ```
