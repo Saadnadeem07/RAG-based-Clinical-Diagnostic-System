@@ -122,11 +122,16 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-## 👤 Author
+## 👤 Author & Contributor
 
-**Muhammad Bin Imran**
-FAST National University of Computer and Emerging Sciences
+### ✍️ Muhammad Bin Imran  
+FAST National University of Computer and Emerging Sciences  
 📧 [muhammadbinimran1000@gmail.com](mailto:muhammadbinimran1000@gmail.com)
+
+### 🤝 Saad Nadeem  
+Full Stack & DevOps Engineer | FAST NUCES  
+📧 [saadnadeem5509@gmail.com](mailto:saadnadeem5509@gmail.com)  
+💻 [GitHub @saadnadeem07](https://github.com/saadnadeem07)
 
 ---
 
